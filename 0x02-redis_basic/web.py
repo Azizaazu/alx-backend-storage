@@ -4,12 +4,14 @@
 This module defines a function to retrieve HTML content from a URL with caching and tracking.
 """
 
+
 import requests
 import redis
 from functools import wraps
 
-# Initialize Redis connection
+
 redis_client = redis.Redis()
+
 
 def track_url_accesses(func):
     """
